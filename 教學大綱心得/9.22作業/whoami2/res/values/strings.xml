@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Whoami2</string>
+    <string name="hello">Hello World, Whoami2Activity!</string>
+    <string name="str2">按讚</string>
+    <string name="str3">返回</string>
+
+</resources>
