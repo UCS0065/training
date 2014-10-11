@@ -14,4 +14,7 @@
 
 ## 合併Branch
 
+* `git merge NEWBRANCH`：將`NEWBRANCH`合併到現在的Branch
+* `git merge NEWBRANCH --no-ff`：將`NEWBRANCH`合併到現在的Branch，並且關閉Fast forward功能
+
 ## 與GitHub整合
