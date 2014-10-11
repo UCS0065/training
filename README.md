@@ -18,3 +18,5 @@
 * `git merge NEWBRANCH --no-ff`：將`NEWBRANCH`合併到現在的Branch，並且關閉Fast forward功能
 
 ## 與GitHub整合
+
+* Pull Request：將Fork下來repo的特定Branch，合併回源頭的特定Branch
