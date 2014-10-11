@@ -12,12 +12,12 @@
 
 ## 本學期作業繳交方式
 
-每一次上課都會新增一個目錄，請同學們同步老師的repo之後，再繳交作業上來。
+每一次上課都會新增一個branch，請同學們同步老師的repo之後，再繳交作業上來。
 
 以EX1為例，若R9543002要繳交作業的話，檔案目錄結構應該如下
 
-* EX1/R9543002/aaa.png
-* EX1/R9543002/bbb.png
+* R9543002/aaa.png
+* R9543002/bbb.png
 
 EX1後面直接帶學號就可以了，不用另外帶班級、姓名喔，統一格式也比較容易讓老師及助教批改。
 
@@ -36,18 +36,17 @@ EX1後面直接帶學號就可以了，不用另外帶班級、姓名喔，統�
 ```
 origin    https://github.com/YOUR_USERNAME/YOUR_FORK.git (fetch)
 origin    https://github.com/YOUR_USERNAME/YOUR_FORK.git (push)
-upstream  https://github.com/ucs0065/training.git (fetch)
-upstream  https://github.com/ucs0065/training.git (push)
+teacher  https://github.com/ucs0065/training.git (fetch)
+teacher  https://github.com/ucs0065/training.git (push)
 ```
-3. `git remote add upstream https://github.com/ucs0065/training.git`：將老師的repo連結到自己的repo中，執行後則再執行第二步驟，檢查是否已連結成功
-4. 若第三步驟打錯字，則可以使用`git remote rm upstream`刪除連結後，再從第二步驟重新執行
+3. `git remote add teacher https://github.com/ucs0065/training.git`：將老師的repo連結到自己的repo中，執行後則再執行第二步驟，檢查是否已連結成功
+4. 若第三步驟打錯字，則可以使用`git remote rm teacher`刪除連結後，再從第二步驟重新執行
 
 ### 3. 將自己的repo更新到老師的最新版本
 
-1. `git fetch upstream`：將老師repo的最新版本，抓到本機先暫存起來
+1. `git fetch teacher`：將老師repo的最新版本，抓到本機先暫存起來
 2. `git checkout master`：將自己repo的branch切換到主線(master)
 3. `git merge upstream/master`：將本機暫存老師repo的最新版本，合併到自己repo裡面
-4. 回GitHub for Windows，按下`Sync`即完成更新
 
 # References
 
