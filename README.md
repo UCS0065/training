@@ -1,56 +1,22 @@
 # training
 
-本課程除訓練學生了解行動裝置程式設計、架構、原理以及應用服務外，並著重在介紹相關之證照考試，如：TQC+認證。配合課程研讀相關資料，並鼓勵同學們參加TQC+認證，以期增加同學未來職場上的競爭力。
+今天要教大家如何操作Branch，這也是Git絕對要會的技能，總共分為以下幾個功能：
 
-另外，為了縮短資訊業界嚴重的學用落差，並且強化畢業後的競爭力，這門課除了教導目前最火紅的手機App開發外，更重要的是教導許多目前在業界中常見的工具、技術、觀念。如共同協作、版本控管、專案管理.....等。
+* 新增及切換Branch
+* 合併Branch
+* 與GitHub整合
 
-有興趣修課的同學請務必看看下面文章，了解目前業界生態：
+## 新增及切換Branch
 
-* [寫給大學生的程式技能 Cheatsheets](http://blog.xdite.net/posts/2013/11/22/opensource-cheatsheets)
-* [業界與學界，深刻的鴻溝](http://blog.caesarchi.com/2013/12/blog-post_22.html)
-* [TonyQ對於第二篇的回應](https://www.facebook.com/notes/10151828753826709)
+* `git branch NEWBRANCH`：開一個叫做`NEWBRANCH`的Branch
+* `git checkout NEWBRANCH`：切換到一個叫做`NEWBRANCH`的Branch
+* `git checkout -b NEWBRANCH`：開一個叫做`NEWBRANCH`的Branch，並且直接切換過去
 
-## 本學期作業繳交方式
+## 合併Branch
 
-每一次上課都會新增一個branch，請同學們同步老師的repo之後，再繳交作業上來。
+* `git merge NEWBRANCH`：將`NEWBRANCH`合併到現在的Branch
+* `git merge NEWBRANCH --no-ff`：將`NEWBRANCH`合併到現在的Branch，並且關閉Fast forward功能
 
-以EX1為例，若R9543002要繳交作業的話，檔案目錄結構應該如下
+## 與GitHub整合
 
-* R9543002/aaa.png
-* R9543002/bbb.png
-
-EX1後面直接帶學號就可以了，不用另外帶班級、姓名喔，統一格式也比較容易讓老師及助教批改。
-
-## 如何將自己的repo更新到老師repo的最新版本
-
-步驟2只要做第一次就好，之後若要持續更新到老師repo的最新版本，則只要執行步驟3即可。
-
-### 1. 打開Git Shell
-
-1. 開始-&gt;所有程式-&gt;GitHub. Inc.-&gt;Git Shell
-
-### 2. 將自己的repo與老師的repo連結
-
-1. `cd\[你的目錄]`：先將工作目錄移動到你之前clone下來的目錄
-2. `git remote -v`：先檢查自己的repo是否與老師的repo連結。若出現以下內容，則表示連結成功；若無則執行第三步驟
-```
-origin    https://github.com/YOUR_USERNAME/YOUR_FORK.git (fetch)
-origin    https://github.com/YOUR_USERNAME/YOUR_FORK.git (push)
-teacher  https://github.com/ucs0065/training.git (fetch)
-teacher  https://github.com/ucs0065/training.git (push)
-```
-3. `git remote add teacher https://github.com/ucs0065/training.git`：將老師的repo連結到自己的repo中，執行後則再執行第二步驟，檢查是否已連結成功
-4. 若第三步驟打錯字，則可以使用`git remote rm teacher`刪除連結後，再從第二步驟重新執行
-
-### 3. 將自己的repo更新到老師的最新版本
-
-1. `git fetch teacher`：將老師repo的最新版本，抓到本機先暫存起來
-2. `git checkout master`：將自己repo的branch切換到主線(master)
-3. `git merge upstream/master`：將本機暫存老師repo的最新版本，合併到自己repo裡面
-
-# References
-
-* [Markdown 語法說明](http://markdown.tw/)
-* [Dillinger - 一套Markdown的線上編輯器](http://dillinger.io/)
-* [Configuring a remote for a fork](https://help.github.com/articles/configuring-a-remote-for-a-fork)
-* [Syncing a fork](https://help.github.com/articles/syncing-a-fork)
+* Pull Request：將Fork下來repo的特定Branch，合併回源頭的特定Branch
